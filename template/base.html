@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}微博{% end %}</title>
+
+        <style>
+            .left,
+            .right,
+            .footer {
+                padding: 30px;
+            }
+        </style>
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+        {% block ext_css %}{% end %}
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">微博</a>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/info">个人信息</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">关注的人</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">粉丝</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/register">注册</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/post">发个微博吧!!!</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-8 left">{% block left %}{% end %}</div>
+                <div class="col-4 right">热门微博</div>
+            </div>
+            <div class="fixed-bottom text-center footer">
+                Copyright@Seamile-2019
+            </div>
+        </div>
+
+        <script src="/static/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="/static/js/popper.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+    </body>
+</html>
